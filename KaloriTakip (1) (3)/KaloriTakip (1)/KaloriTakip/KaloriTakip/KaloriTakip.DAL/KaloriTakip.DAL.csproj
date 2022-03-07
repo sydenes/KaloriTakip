@@ -63,6 +63,7 @@
     <Compile Include="Repositories\EntryDetailRepository.cs" />
     <Compile Include="Repositories\FoodCategoryRepository.cs" />
     <Compile Include="Repositories\FoodRepository.cs" />
+    <Compile Include="Repositories\MealEntryRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -43,9 +43,10 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Deneme.cs" />
-    <Compile Include="Services\EntryService.cs" />
+    <Compile Include="Services\EntryDetailService.cs" />
     <Compile Include="Services\FoodCategoryService.cs" />
     <Compile Include="Services\FoodService.cs" />
+    <Compile Include="Services\MealEntryService.cs" />
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>
   <ItemGroup>

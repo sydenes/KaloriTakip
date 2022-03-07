@@ -39,5 +39,6 @@ namespace KaloriTakip.BLL.Services
         {
             userRepository.DBActivate(userID);
         }
+
     }
 }

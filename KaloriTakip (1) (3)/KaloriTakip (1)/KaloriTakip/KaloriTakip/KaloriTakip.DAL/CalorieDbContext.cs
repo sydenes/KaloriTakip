@@ -25,6 +25,7 @@ namespace KaloriTakip.DAL
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new UserConfigiration());
+            modelBuilder.Configurations.Add(new MealEntryConfigiration());
         }
 
     }

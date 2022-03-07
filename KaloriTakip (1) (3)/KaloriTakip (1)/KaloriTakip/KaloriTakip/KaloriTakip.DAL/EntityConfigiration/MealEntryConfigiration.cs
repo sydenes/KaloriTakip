@@ -15,7 +15,7 @@ namespace KaloriTakip.DAL.EntityConfigiration
         {
             Property(a => a.MealEntryID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(a => a.EntryDate)
-                .IsRequired();
+                .IsRequired().HasColumnType("date");
             Property(a => a.UpdateDate)
                 .IsRequired();
                 

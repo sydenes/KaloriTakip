@@ -14,21 +14,25 @@ namespace KaloriTakip
 {
     public partial class MealAdd : Form
     {
-        private User user;
         FoodCategoryService foodCategoryService;
         FoodService foodService;
+        MealEntryService mealEntryService;
+        EntryDetailService entryDetailService;
         public MealAdd()
         {
             InitializeComponent();
         }
 
-        public MealAdd(User user)
+        public MealAdd(MealEntry newEntry)
         {
             InitializeComponent();
-            this.user = user;
+            this.newEntry = newEntry;
             foodCategoryService = new FoodCategoryService();
             foodService = new FoodService();
+            mealEntryService = new MealEntryService();
+            entryDetailService = new EntryDetailService();
         }
+
         List<FoodCategories> foodCategoriesList;
         private void MealAdd_Load(object sender, EventArgs e)
         {
@@ -39,9 +43,13 @@ namespace KaloriTakip
             cmbCategories.ValueMember = "FoodCategoriesID";
 
             cmbCategories.SelectedIndex = -1;
+
+            mealEntryService.InsertMealEntry(newEntry);
         }
         List<Food> foodList;
         int selectedID;
+        private MealEntry newEntry;
+
         private void cmbCategories_SelectedIndexChanged(object sender, EventArgs e)
         {
             lstvFoods.Items.Clear();
@@ -49,24 +57,40 @@ namespace KaloriTakip
             foodList = foodService.GetFoods(selectedID);
             FillListView(foodList);
         }
-
+        ListViewItem lviFood;
         private void lstvFoods_Click(object sender, EventArgs e)
         {
-            ListViewItem lvi = new ListViewItem();
-            lvi = lstvFoods.SelectedItems[0];
-            lblCalorie.Text = lvi.SubItems[1].Text;
-            lblCarbonh.Text = lvi.SubItems[2].Text;
-            lblPro.Text = lvi.SubItems[3].Text;
-            lblFat.Text = lvi.SubItems[4].Text;
+            lviFood = new ListViewItem();
+            lviFood = lstvFoods.SelectedItems[0];
+            lblCalorie.Text = lviFood.SubItems[1].Text;
+            lblCarbonh.Text = lviFood.SubItems[2].Text;
+            lblPro.Text = lviFood.SubItems[3].Text;
+            lblFat.Text = lviFood.SubItems[4].Text;
         }
-        //ListViewItem lvi;
+        EntryDetails entryDetails;
+        List<EntryDetails> entryDetailsList = new List<EntryDetails>();
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            //Listview'e basma kısmı
             ListViewItem lvi2 = new ListViewItem();
             string foodName = lstvFoods.SelectedItems[0].Text;
             lvi2.Text = foodName;
             lvi2.SubItems.Add(nudSerValue.Value.ToString());
             lstvAddedFoods.Items.Add(lvi2);
+
+            //EntryDetailsList'e basma kısmı
+            int serValue = (int)nudSerValue.Value;
+            entryDetails = new EntryDetails()
+            {
+                FoodID = (int)lstvFoods.SelectedItems[0].Tag,
+                ServiceValue = serValue,
+                TotalCalorie = serValue * Convert.ToDecimal(lviFood.SubItems[1].Text),
+                TotalCarbonhydrates = serValue * Convert.ToDecimal(lviFood.SubItems[2].Text),
+                TotalProtein = serValue * Convert.ToDecimal(lviFood.SubItems[3].Text),
+                TotalFat = serValue * Convert.ToDecimal(lviFood.SubItems[4].Text),
+                MealEntryID = newEntry.MealEntryID
+            };
+            entryDetailsList.Add(entryDetails);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -79,12 +103,18 @@ namespace KaloriTakip
             string searchTxt = txtSearchFood.Text;
             if (string.IsNullOrEmpty(cmbCategories.Text))
             {
-                foodList = foodService.GetFoodsBySearch(searchTxt);
-                FillListView(foodList);
+                if (string.IsNullOrEmpty(searchTxt))
+                {
+                    lstvFoods.Items.Clear();
+                }
+                else
+                {
+                    foodList = foodService.GetFoodsBySearch(searchTxt);
+                    FillListView(foodList);
+                }
             }
             else
             {
-                // foodList = foodService.GetFoodsBySearchWithCategory(searchTxt,selectedID);
                 List<Food> newList = new List<Food>();
                foodList = foodService.GetFoods(selectedID);
                 foreach (var item in foodList)
@@ -115,6 +145,11 @@ namespace KaloriTakip
 
                 lstvFoods.Items.Add(lvi);
             }
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            entryDetailService.Insert(entryDetailsList);
         }
     }
 }

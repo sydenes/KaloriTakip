@@ -33,20 +33,18 @@ namespace KaloriTakip
             this.lblCalorie = new System.Windows.Forms.Label();
             this.pbarCarbon = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.nudSerValue = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.Kahvaltı = new System.Windows.Forms.GroupBox();
+            this.btnBreakfeast = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.pbarFat = new System.Windows.Forms.ProgressBar();
             this.pbarPro = new System.Windows.Forms.ProgressBar();
             this.pbarCalorie = new System.Windows.Forms.ProgressBar();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSerValue)).BeginInit();
-            this.Kahvaltı.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.pnlBreakfeast = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLunch = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtpDate
@@ -82,81 +80,26 @@ namespace KaloriTakip
             this.label1.TabIndex = 3;
             this.label1.Text = "Karbonhidrat";
             // 
-            // btnAdd
+            // btnBreakfeast
             // 
-            this.btnAdd.Location = new System.Drawing.Point(257, 59);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "Ekle";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // nudSerValue
-            // 
-            this.nudSerValue.Location = new System.Drawing.Point(69, 475);
-            this.nudSerValue.Name = "nudSerValue";
-            this.nudSerValue.Size = new System.Drawing.Size(120, 22);
-            this.nudSerValue.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 89);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 17);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "elma";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(420, 475);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // Kahvaltı
-            // 
-            this.Kahvaltı.Controls.Add(this.label4);
-            this.Kahvaltı.Controls.Add(this.btnAdd);
-            this.Kahvaltı.Location = new System.Drawing.Point(29, 229);
-            this.Kahvaltı.Name = "Kahvaltı";
-            this.Kahvaltı.Size = new System.Drawing.Size(378, 109);
-            this.Kahvaltı.TabIndex = 9;
-            this.Kahvaltı.TabStop = false;
-            this.Kahvaltı.Text = "groupBox1";
+            this.btnBreakfeast.Location = new System.Drawing.Point(442, 41);
+            this.btnBreakfeast.Name = "btnBreakfeast";
+            this.btnBreakfeast.Size = new System.Drawing.Size(75, 23);
+            this.btnBreakfeast.TabIndex = 8;
+            this.btnBreakfeast.Tag = "1";
+            this.btnBreakfeast.Text = "Ekle";
+            this.btnBreakfeast.UseVisualStyleBackColor = true;
+            this.btnBreakfeast.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(429, 371);
+            this.button2.Location = new System.Drawing.Point(442, 149);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 4;
             this.button2.Text = "Ekle";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Location = new System.Drawing.Point(35, 344);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(378, 109);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(32, 89);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 17);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "elma";
             // 
             // pbarFat
             // 
@@ -179,19 +122,68 @@ namespace KaloriTakip
             this.pbarCalorie.Size = new System.Drawing.Size(92, 14);
             this.pbarCalorie.TabIndex = 10;
             // 
+            // pnlBreakfeast
+            // 
+            this.pnlBreakfeast.AutoScroll = true;
+            this.pnlBreakfeast.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlBreakfeast.Location = new System.Drawing.Point(0, 437);
+            this.pnlBreakfeast.Name = "pnlBreakfeast";
+            this.pnlBreakfeast.Size = new System.Drawing.Size(529, 88);
+            this.pnlBreakfeast.TabIndex = 11;
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.btnLunch);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 337);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(529, 100);
+            this.panel1.TabIndex = 12;
+            // 
+            // btnLunch
+            // 
+            this.btnLunch.Location = new System.Drawing.Point(442, 40);
+            this.btnLunch.Name = "btnLunch";
+            this.btnLunch.Size = new System.Drawing.Size(75, 23);
+            this.btnLunch.TabIndex = 14;
+            this.btnLunch.Tag = "2";
+            this.btnLunch.Text = "Ekle";
+            this.btnLunch.UseVisualStyleBackColor = true;
+            this.btnLunch.Click += new System.EventHandler(this.btnLunch_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.btnBreakfeast);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 237);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(529, 100);
+            this.panel2.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(32, 57);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 17);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "label2";
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(529, 525);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlBreakfeast);
             this.Controls.Add(this.pbarCalorie);
             this.Controls.Add(this.pbarPro);
             this.Controls.Add(this.pbarFat);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.Kahvaltı);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.nudSerValue);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCalorie);
             this.Controls.Add(this.pbarCarbon);
@@ -199,11 +191,9 @@ namespace KaloriTakip
             this.Name = "Calculator";
             this.Text = "Calculator";
             this.Load += new System.EventHandler(this.Calculator_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.nudSerValue)).EndInit();
-            this.Kahvaltı.ResumeLayout(false);
-            this.Kahvaltı.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,16 +205,15 @@ namespace KaloriTakip
         private System.Windows.Forms.Label lblCalorie;
         private System.Windows.Forms.ProgressBar pbarCarbon;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.NumericUpDown nudSerValue;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox Kahvaltı;
+        private System.Windows.Forms.Button btnBreakfeast;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ProgressBar pbarFat;
         private System.Windows.Forms.ProgressBar pbarPro;
         private System.Windows.Forms.ProgressBar pbarCalorie;
+        private System.Windows.Forms.Panel pnlBreakfeast;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnLunch;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -32,27 +32,27 @@ namespace KaloriTakip
             this.cmbCategories = new System.Windows.Forms.ComboBox();
             this.txtSearchFood = new System.Windows.Forms.TextBox();
             this.lstvFoods = new System.Windows.Forms.ListView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.nudSerValue = new System.Windows.Forms.NumericUpDown();
-            this.pboxFoodImage = new System.Windows.Forms.PictureBox();
-            this.lblCalorie = new System.Windows.Forms.Label();
-            this.lblCarbonh = new System.Windows.Forms.Label();
-            this.lblPro = new System.Windows.Forms.Label();
-            this.lblFat = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.lstvAddedFoods = new System.Windows.Forms.ListView();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnConfirm = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblFat = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblPro = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblCarbonh = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblCalorie = new System.Windows.Forms.Label();
+            this.pboxFoodImage = new System.Windows.Forms.PictureBox();
+            this.nudSerValue = new System.Windows.Forms.NumericUpDown();
+            this.lstvAddedFoods = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnConfirm = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSerValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxFoodImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSerValue)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbCategories
@@ -88,6 +88,11 @@ namespace KaloriTakip
             this.lstvFoods.View = System.Windows.Forms.View.Details;
             this.lstvFoods.Click += new System.EventHandler(this.lstvFoods_Click);
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Foods";
+            this.columnHeader1.Width = 168;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnAdd);
@@ -108,47 +113,24 @@ namespace KaloriTakip
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // nudSerValue
+            // btnAdd
             // 
-            this.nudSerValue.Location = new System.Drawing.Point(6, 98);
-            this.nudSerValue.Name = "nudSerValue";
-            this.nudSerValue.Size = new System.Drawing.Size(107, 22);
-            this.nudSerValue.TabIndex = 0;
+            this.btnAdd.Location = new System.Drawing.Point(25, 135);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 4;
+            this.btnAdd.Text = "Ekle";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // pboxFoodImage
+            // label7
             // 
-            this.pboxFoodImage.Location = new System.Drawing.Point(6, 21);
-            this.pboxFoodImage.Name = "pboxFoodImage";
-            this.pboxFoodImage.Size = new System.Drawing.Size(107, 59);
-            this.pboxFoodImage.TabIndex = 1;
-            this.pboxFoodImage.TabStop = false;
-            // 
-            // lblCalorie
-            // 
-            this.lblCalorie.AutoSize = true;
-            this.lblCalorie.Location = new System.Drawing.Point(276, 21);
-            this.lblCalorie.Name = "lblCalorie";
-            this.lblCalorie.Size = new System.Drawing.Size(46, 17);
-            this.lblCalorie.TabIndex = 2;
-            this.lblCalorie.Text = "label1";
-            // 
-            // lblCarbonh
-            // 
-            this.lblCarbonh.AutoSize = true;
-            this.lblCarbonh.Location = new System.Drawing.Point(276, 63);
-            this.lblCarbonh.Name = "lblCarbonh";
-            this.lblCarbonh.Size = new System.Drawing.Size(46, 17);
-            this.lblCarbonh.TabIndex = 2;
-            this.lblCarbonh.Text = "label1";
-            // 
-            // lblPro
-            // 
-            this.lblPro.AutoSize = true;
-            this.lblPro.Location = new System.Drawing.Point(276, 98);
-            this.lblPro.Name = "lblPro";
-            this.lblPro.Size = new System.Drawing.Size(46, 17);
-            this.lblPro.TabIndex = 2;
-            this.lblPro.Text = "label1";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(209, 129);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 17);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Yağ:";
             // 
             // lblFat
             // 
@@ -159,15 +141,74 @@ namespace KaloriTakip
             this.lblFat.TabIndex = 2;
             this.lblFat.Text = "label1";
             // 
-            // btnAdd
+            // label6
             // 
-            this.btnAdd.Location = new System.Drawing.Point(25, 135);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "Ekle";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(189, 98);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 17);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Protein:";
+            // 
+            // lblPro
+            // 
+            this.lblPro.AutoSize = true;
+            this.lblPro.Location = new System.Drawing.Point(276, 98);
+            this.lblPro.Name = "lblPro";
+            this.lblPro.Size = new System.Drawing.Size(46, 17);
+            this.lblPro.TabIndex = 2;
+            this.lblPro.Text = "label1";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(154, 63);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(94, 17);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Karbonhidrat:";
+            // 
+            // lblCarbonh
+            // 
+            this.lblCarbonh.AutoSize = true;
+            this.lblCarbonh.Location = new System.Drawing.Point(276, 63);
+            this.lblCarbonh.Name = "lblCarbonh";
+            this.lblCarbonh.Size = new System.Drawing.Size(46, 17);
+            this.lblCarbonh.TabIndex = 2;
+            this.lblCarbonh.Text = "label1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(200, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Kalori:";
+            // 
+            // lblCalorie
+            // 
+            this.lblCalorie.AutoSize = true;
+            this.lblCalorie.Location = new System.Drawing.Point(276, 21);
+            this.lblCalorie.Name = "lblCalorie";
+            this.lblCalorie.Size = new System.Drawing.Size(46, 17);
+            this.lblCalorie.TabIndex = 2;
+            this.lblCalorie.Text = "label1";
+            // 
+            // pboxFoodImage
+            // 
+            this.pboxFoodImage.Location = new System.Drawing.Point(6, 21);
+            this.pboxFoodImage.Name = "pboxFoodImage";
+            this.pboxFoodImage.Size = new System.Drawing.Size(107, 59);
+            this.pboxFoodImage.TabIndex = 1;
+            this.pboxFoodImage.TabStop = false;
+            // 
+            // nudSerValue
+            // 
+            this.nudSerValue.Location = new System.Drawing.Point(6, 98);
+            this.nudSerValue.Name = "nudSerValue";
+            this.nudSerValue.Size = new System.Drawing.Size(107, 22);
+            this.nudSerValue.TabIndex = 0;
             // 
             // lstvAddedFoods
             // 
@@ -183,6 +224,16 @@ namespace KaloriTakip
             this.lstvAddedFoods.TabIndex = 4;
             this.lstvAddedFoods.UseCompatibleStateImageBehavior = false;
             this.lstvAddedFoods.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Besin Adı:";
+            this.columnHeader2.Width = 165;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Adet";
+            this.columnHeader3.Width = 86;
             // 
             // btnDelete
             // 
@@ -202,57 +253,7 @@ namespace KaloriTakip
             this.btnConfirm.TabIndex = 6;
             this.btnConfirm.Text = "Onay";
             this.btnConfirm.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(200, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Kalori:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(154, 63);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 17);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Karbonhidrat:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(189, 98);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 17);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Protein:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(209, 129);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 17);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Yağ:";
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Foods";
-            this.columnHeader1.Width = 168;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Besin Adı:";
-            this.columnHeader2.Width = 165;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Adet";
-            this.columnHeader3.Width = 86;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // MealAdd
             // 
@@ -271,8 +272,8 @@ namespace KaloriTakip
             this.Load += new System.EventHandler(this.MealAdd_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSerValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxFoodImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSerValue)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
