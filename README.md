@@ -10,10 +10,10 @@ Uygulama Adımları:
 * Raporlar sekmesinden kullanıcı kendisinin veya diğer kullanıcılar ile karşılaştırmasının raporunu günlük/aylık olarak görebilir.
 * Kullanıcı profil kısmından kilo, boy gibi özelliklerini veya şifresini değiştirebilir.
 
-![Main](https://www.linkpicture.com/view.php?img=LPic622cd00846dc41097839364)
+![Main](https://www.linkpicture.com/q/Calculator1.png)
 
-![Add](https://www.linkpicture.com/view.php?img=LPic622cd07304460607575870)
+![Add](https://www.linkpicture.com/q/MealAdd1.png)
 
-![Reports](https://www.linkpicture.com/view.php?img=LPic622cd0a5852a51502704715)
+![Reports](https://www.linkpicture.com/q/Reports1.png)
 
 ![Settings](https://www.linkpicture.com/q/UserSettings1.png)
