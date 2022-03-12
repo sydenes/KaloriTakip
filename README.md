@@ -16,4 +16,4 @@ Uygulama Adımları:
 
 ![Reports](https://www.linkpicture.com/view.php?img=LPic622cd0a5852a51502704715)
 
-![Options](https://www.linkpicture.com/view.php?img=LPic622cd0bc9dd80969726797)
+![Settings](https://www.linkpicture.com/q/UserSettings1.png)
